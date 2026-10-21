@@ -1,4 +1,4 @@
-def is_even(number) -> bool:
+def is_even(number: int) -> bool:
     """ Return True if number is even and False if it is odd.
 
     :param number: Number to check if its even
@@ -91,7 +91,7 @@ def repeat_text(text: str, times: int) -> str:
 
     :param text: Text to be repeated
     :param times: How many times text will be repeated
-    :return:
+    :return: text repeated times times without newline characters
     """
     output = ""
     for i in range(times):
@@ -138,7 +138,7 @@ def make_initials(first_name: str, last_name: str) -> str:
     """
     return (first_name[0] + last_name[0]).upper()
 
-def percent_score(points: float, possible: float) -> float:
+def percent_score(points: float, possible: float) -> float | None:
     """Calculate what percentage of the possible points
     were earned. Return None if possible is less than 1.
 
@@ -149,7 +149,10 @@ def percent_score(points: float, possible: float) -> float:
     :param possible: How many the person could possibly have gotten
     :return: points out of possible as a percent
     """
-    return points / possible * 100
+    if possible < 1:
+        return None
+    else: 
+        return points / possible * 100
 
 
 def is_between(number: float, minimum: float, maximum: float) -> bool:
@@ -190,13 +193,6 @@ def average_three(a: float, b: float, c: float) -> float:
     :return: The average of a, b and c
     """
     return (a + b + c) / 3
-
-## Cuz this is just to ez
-# def average(numbers):
-#     total = 0
-#     for i in numbers:
-#         total += i
-#     return i / len(numbers)
 
 def describe_temperature(temperature: float, cold_limit: float, hot_limit: float) -> str:
     """Returns a string describing the temperature.
