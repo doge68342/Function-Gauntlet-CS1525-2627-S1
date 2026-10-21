@@ -9,7 +9,7 @@ def is_even(number) -> bool:
     else:
         return False
 
-def count_vowels(text) -> int:
+def count_vowels(text: str) -> int:
     """Count how many vowels (a, e, i, o, u) are in text.
     Uppercase and lowercase vowels should both count.
 
@@ -24,7 +24,7 @@ def count_vowels(text) -> int:
                 counter += 1
     return counter
 
-def celsius_to_fahrenheit(celsius) -> float:
+def celsius_to_fahrenheit(celsius: float) -> float:
     """Convert a Celsius temperature to Fahrenheit.
 
     :param celsius: Temperature in celcius
@@ -33,7 +33,7 @@ def celsius_to_fahrenheit(celsius) -> float:
     return (celsius * 9/5) + 32
 
 
-def reverse_text(text) -> str:
+def reverse_text(text: str) -> str:
     """Return the characters in text in reverse order.
 
     Example:
@@ -47,7 +47,7 @@ def reverse_text(text) -> str:
         output += (text[-(i + 1)])
     return output
 
-def larger_number(a, b) -> float:
+def larger_number(a: float, b: float) -> float:
     """Return whichever of the two integers is larger.
     If they are equal, return either value.
 
@@ -58,7 +58,7 @@ def larger_number(a, b) -> float:
     return max(a, b)
 
 
-def average_two(a, b) -> float:
+def average_two(a: float, b: float) -> float:
     """Calculate and return the average of two integers.
 
     :param a: A number
@@ -68,7 +68,7 @@ def average_two(a, b) -> float:
     return (a + b) / 2
 
 
-def can_afford(balance, cost) -> bool:
+def can_afford(balance: float, cost: float) -> bool:
     """Return True if balance is greater than or equal to cost.
     Otherwise, return False.
 
@@ -82,7 +82,7 @@ def can_afford(balance, cost) -> bool:
         return False
 
 
-def repeat_text(text, times) -> str:
+def repeat_text(text: str, times: int) -> str:
     """Return one string containing text repeated the given
     number of times.
 
@@ -99,7 +99,7 @@ def repeat_text(text, times) -> str:
     return output
 
 
-def contains_word(sentence, word) -> bool:
+def contains_word(sentence: str, word: str) -> bool:
     """Return True if word appears somewhere inside sentence.
     Otherwise, return False.
 
@@ -113,7 +113,7 @@ def contains_word(sentence, word) -> bool:
         return False
 
 
-def calculate_tip(cost, percent) -> float:
+def calculate_tip(cost: float, percent: float) -> float:
     """Calculate and return the amount of tip.
 
     Example:
@@ -126,7 +126,7 @@ def calculate_tip(cost, percent) -> float:
     return cost * (percent / 100)
 
 
-def make_initials(first_name, last_name) -> str:
+def make_initials(first_name: str, last_name: str) -> str:
     """Return the uppercase first letters of the two names.
 
     Example:
@@ -138,7 +138,7 @@ def make_initials(first_name, last_name) -> str:
     """
     return (first_name[0] + last_name[0]).upper()
 
-def percent_score(points, possible) -> float:
+def percent_score(points: float, possible: float) -> float:
     """Calculate what percentage of the possible points
     were earned. Return None if possible is less than 1.
 
@@ -152,7 +152,7 @@ def percent_score(points, possible) -> float:
     return points / possible * 100
 
 
-def is_between(number, minimum, maximum) -> bool:
+def is_between(number: float, minimum: float, maximum: float) -> bool:
     """Return True if number is between minimum and maximum,
     including the minimum and maximum values.
 
@@ -166,7 +166,7 @@ def is_between(number, minimum, maximum) -> bool:
     else:
         return False
 
-def all_different(a, b, c) -> bool:
+def all_different(a: str, b: str, c: str) -> bool:
     """Check if three strings are different.
     Return True if all three strings are different.
     Otherwise,return False.
@@ -181,7 +181,7 @@ def all_different(a, b, c) -> bool:
     else:
         return True
 
-def average_three(a, b, c) -> float:
+def average_three(a: float, b: float, c: float) -> float:
     """Calculate and return the average of three integers.
 
     :param a: A number
@@ -198,7 +198,7 @@ def average_three(a, b, c) -> float:
 #         total += i
 #     return i / len(numbers)
 
-def describe_temperature(temperature, cold_limit, hot_limit) -> str:
+def describe_temperature(temperature: float, cold_limit: float, hot_limit: float) -> str:
     """Returns a string describing the temperature.
     Return "cold" if temperature is below cold_limit,
     "hot" if temperature is above hot_limit,
